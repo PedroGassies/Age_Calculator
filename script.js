@@ -20,6 +20,31 @@ function calculateAge(birthYear,birthMonth, birthDay){
 
     return {years, months, days};
 }
+function validateMonth(month){
+    if (month < 1 || month > 12) {
+        alert("Must be between 1 and 12.");
+        return
+    }
+}
+function getDaysInMonth(month, year) {
+    return new Date(year, month, 0).getDate();
+}
+
+function isValidDate(day, month, year) {
+    // Création d'un objet Date
+    const date = new Date(year, month - 1, day);
+    
+    // Vérification si la date est valide
+    return date.getFullYear() === year &&
+           date.getMonth() === month - 1 &&
+           date.getDate() === day;
+}
+
+function isFutureDate(day, month, year) {
+    const inputDate = new Date(year, month - 1, day);
+    const currentDate = new Date();
+    return inputDate > currentDate;
+}
 
 function handleSubmit(event){
     event.preventDefault();
@@ -27,12 +52,29 @@ function handleSubmit(event){
     const month= parseInt(document.getElementById('month').value, 10);
     const year= parseInt(document.getElementById('year').value, 10);
 
+    if (isNaN(day) || isNaN(month) || isNaN(year)) {
+        alert("Must be numbers.");
+        return;
+    }
+    if (!validateMonth(month)) {
+        return; // Arrêter l'exécution si le mois est invalide
+    };
+    if (!isValidDate(day, month, year)) {
+        const daysInMonth = getDaysInMonth(month, year);
+        alert(` ${month}'s month of ${year} has ${daysInMonth} days.`);
+        return;
+    }
 
-const age= calculateAge(year, month, day); // appel de la fonction après avoir récupérée les valeurs, converties en nombres.
+    if (isFutureDate(day, month, year)) {
+        alert("Must be in the past.");
+        return;
+    }
 
-document.getElementById('years').textContent = age.years;
-document.getElementById('months').textContent = age.months;
-document.getElementById('days').textContent = age.days;
+    const age= calculateAge(year, month, day); // appel de la fonction après avoir récupérée les valeurs, converties en nombres.
+
+    document.getElementById('years').textContent = age.years;
+    document.getElementById('months').textContent = age.months;
+    document.getElementById('days').textContent = age.days;
 }
 
 document.addEventListener('DOMContentLoaded', function() {
