@@ -1,37 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link href="style.css" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Age calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
+  <section>
+    <form>
+      <div class="form">
+        <div>
+          <p>DAY</p>
+          <input type="number" id="day" name="day" placeholder="DD" required minlength="1" maxlength="2">
+        </div>
+        <div>
+          <p>MONTH</p>
+          <input type="number" id="month" name="month" placeholder="MM" required minlength="1" maxlength="2">
+        </div>
+        <div>
+          <p>YEAR</p>
+          <input type="number" id="year" name="year" placeholder="YYYY" required length="4">
+        </div>
+      </div>
+      <div>
 
-  Day
-  DD
+        <label>
+          <span></span>
+          <button type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
+              <g fill="none" stroke="#FFF" stroke-width="2">
+                <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" />
+              </g>
+            </svg>
+          </button>
+        </label>
+      </div>
+    </form>
 
-  Month
-  MM
 
-  Year
-  YYYY
+    <div class="result">
+      <div>
+        <p>--</p>
+        <p>years</p>
+      </div>
+      <div>
+        <p>--</p>
+        <p>months</p>
+      </div>
+      <div>
+        <p>--</p>
+        <p>days</p>
+      </div>
 
-  -- years
-  -- months
-  -- days
-  
+  </section>
+
+  </div>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Pedro Gassies</a>.
   </div>
 </body>
+
 </html>
