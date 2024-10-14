@@ -7,7 +7,7 @@
   <!-- displays site properly based on user's device -->
   <link href="style.css" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-
+  <script src="script.js"></script>
   <title>Frontend Mentor | Age calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -44,7 +44,7 @@
 
         <label>
           <span></span>
-          <button type="submit">
+          <button id="calculateAge" type="submit">
             <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
               <g fill="none" stroke="#FFF" stroke-width="2">
                 <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" />
@@ -58,15 +58,15 @@
 
     <div class="result">
       <div>
-        <p>--</p>
+        <p id="years">--</p>
         <p>years</p>
       </div>
       <div>
-        <p>--</p>
+        <p id="months">--</p>
         <p>months</p>
       </div>
       <div>
-        <p>--</p>
+        <p id="days">--</p>
         <p>days</p>
       </div>
 
