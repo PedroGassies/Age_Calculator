@@ -10,6 +10,10 @@
     font-family: 'PoppinsR';
     src:url("./assets/fonts/Poppins-Regular.ttf");
 }
+@font-face {
+    font-family: 'PoppinsI';
+    src:url("./assets/fonts/Poppins-Italic.ttf");
+}
 
 body{
     background-color:hsl(0, 0%, 94%);
@@ -67,6 +71,19 @@ input::placeholder, .form p{
 
 p{
     margin:0
+}
+#error-message-day,#error-message-month,#error-message-year{
+    color:hsl(0, 100%, 67%);
+    font-family: "PoppinsI";
+    letter-spacing: normal;
+    font-size: 12px;
+    margin-top: 10px;
+}
+#day.error,#month.error,#year.error{
+    border: 1px solid hsl(0, 100%, 67%);
+}
+.label.error{
+    color:red;
 }
 .result p{
     font-size:64px;

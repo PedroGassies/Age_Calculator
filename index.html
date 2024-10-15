@@ -28,16 +28,19 @@
     <form>
       <div class="form">
         <div>
-          <p>DAY</p>
+          <p class="label">DAY</p>
           <input type="number" id="day" name="day" placeholder="DD" required minlength="1" maxlength="2">
+          <p id="error-message-day" class="error-message"></p> <!-- Zone de message d'erreur pour le jour -->
         </div>
         <div>
-          <p>MONTH</p>
+          <p class="label">MONTH</p>
           <input type="number" id="month" name="month" placeholder="MM" required minlength="1" maxlength="2">
+          <p id="error-message-month" class="error-message"></p> <!-- Zone de message d'erreur pour le mois -->
         </div>
         <div>
-          <p>YEAR</p>
+          <p class="label">YEAR</p>
           <input type="number" id="year" name="year" placeholder="YYYY" required length="4">
+          <p id="error-message-year" class="error-message"></p> <!-- Zone de message d'erreur pour l'année -->
         </div>
       </div>
       <div>
