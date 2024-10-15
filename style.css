@@ -104,6 +104,7 @@ button{
 }
 button:hover{
     cursor: pointer;
+    background-color: black;
 }
 label{
     display: flex;
